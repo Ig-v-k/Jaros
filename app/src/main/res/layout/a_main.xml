@@ -1,12 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:fitsSystemWindows="true">
+    <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true">
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/v_collapsing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="180dp"
+                android:paddingHorizontal="16dp"
+                app:contentScrim="?android:colorBackground"
+                android:background="?android:colorBackground">
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="start|bottom"
+                    android:paddingBottom="30dp">
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="🙌 Bar mleczny, zapraszamy!"
+                        android:textAppearance="@style/TextAppearance.Material3.DisplayMedium"/>
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Jagiellońska 38, 80-367 Gdańsk"
+                        android:textAppearance="@style/TextAppearance.Material3.TitleLarge"/>
+            </LinearLayout>
+
+            <com.google.android.material.appbar.MaterialToolbar
+                    android:id="@+id/v_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:menu="@menu/m_main"/>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
     <FrameLayout
             android:id="@+id/v_main_container"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
