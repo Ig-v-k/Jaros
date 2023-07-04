@@ -33,7 +33,7 @@
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Jagiellońska 38, 80-367 Gdańsk"
+                        android:text="📌Jagiellońska 38, 80-367 Gdańsk"
                         android:textAppearance="@style/TextAppearance.Material3.TitleLarge"/>
             </LinearLayout>
 
