@@ -10,40 +10,37 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fitsSystemWindows="true">
-        <com.google.android.material.appbar.CollapsingToolbarLayout
-                android:id="@+id/v_collapsing"
+        <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/v_toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:minHeight="180dp"
-                app:contentScrim="?android:colorBackground"
-                android:background="?android:colorBackground">
+                app:menu="@menu/m_main">
             <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:gravity="start|bottom"
-                    android:paddingBottom="30dp">
+                    android:layout_marginTop="54dp">
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="🙌 Bar mleczny, zapraszamy!"
-                        android:layout_marginHorizontal="16dp"
                         android:textAppearance="@style/TextAppearance.Material3.DisplayMedium"/>
 
                 <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="📌Jagiellońska 38, 80-367 Gdańsk"
-                        android:layout_marginHorizontal="16dp"
                         android:textAppearance="@style/TextAppearance.Material3.TitleLarge"/>
             </LinearLayout>
+        </com.google.android.material.appbar.MaterialToolbar>
 
-            <com.google.android.material.appbar.MaterialToolbar
-                    android:id="@+id/v_toolbar"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:menu="@menu/m_main"/>
-        </com.google.android.material.appbar.CollapsingToolbarLayout>
+        <com.google.android.material.search.SearchBar
+                android:id="@+id/v_searchbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Szukaj danie"
+                android:contentDescription="Input text for find meal"
+                android:layout_marginVertical="36dp"/>
     </com.google.android.material.appbar.AppBarLayout>
 
     <FrameLayout
@@ -51,4 +48,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+    <com.google.android.material.search.SearchView
+            android:id="@+id/v_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

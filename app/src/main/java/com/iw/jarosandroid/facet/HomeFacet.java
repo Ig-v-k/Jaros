@@ -8,7 +8,6 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.iw.jarosandroid.Facet;
 import com.iw.jarosandroid.R;
 import org.jetbrains.annotations.NotNull;
@@ -37,7 +36,6 @@ public final class HomeFacet extends Fragment implements Facet {
     @Override
     public void onViewCreated(@NonNull @NotNull View view,
                               @Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
-
     }
 
     @Override
