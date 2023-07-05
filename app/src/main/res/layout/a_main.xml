@@ -40,7 +40,8 @@
                 android:layout_height="wrap_content"
                 android:hint="Szukaj danie"
                 android:contentDescription="Input text for find meal"
-                android:layout_marginVertical="36dp"/>
+                android:layout_marginVertical="36dp"
+                app:menu="@menu/m_searchbar"/>
     </com.google.android.material.appbar.AppBarLayout>
 
     <FrameLayout
