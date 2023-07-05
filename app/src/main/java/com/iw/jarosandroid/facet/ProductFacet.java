@@ -19,6 +19,10 @@ public final class ProductFacet extends Fragment implements Facet {
     private View vMain;
     private final Product product;
 
+    public ProductFacet(Product product) {
+        this.product = product;
+    }
+
     @Override
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);

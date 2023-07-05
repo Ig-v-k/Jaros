@@ -17,6 +17,7 @@ import com.google.android.material.internal.TextWatcherAdapter;
 import com.google.android.material.search.SearchBar;
 import com.google.android.material.search.SearchView;
 import com.iw.jarosandroid.facet.HomeFacet;
+import com.iw.jarosandroid.facet.ProductFacet;
 import com.iw.jarosandroid.route.ContainerRoute;
 
 import java.util.ArrayList;
@@ -66,7 +67,7 @@ public final class MainActivity extends AppCompatActivity {
 
         vList.setOnItemClickListener((parent, view, position, id) -> {
             vSearchView.hide();
-            new ContainerRoute(getSupportFragmentManager()).forward(new ProductFacet());
+            new ContainerRoute(getSupportFragmentManager()).forward(new ProductFacet(null));
         });
 
         new ContainerRoute(getSupportFragmentManager()).replace(new HomeFacet());
