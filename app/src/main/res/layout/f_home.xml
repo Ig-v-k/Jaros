@@ -27,7 +27,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="16dp"
-                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="8dp"
                     android:text="🥩"
                     android:tooltipText="Mieso"
                     app:shapeAppearance="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"
@@ -38,7 +39,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="16dp"
-                    android:layout_marginEnd="16dp"
+                    android:layout_marginEnd="8dp"
                     android:text="🥣"
                     android:tooltipText="Zupy"
                     app:shapeAppearance="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"
@@ -49,7 +50,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="16dp"
-                    android:layout_marginEnd="16dp"
+                    android:layout_marginEnd="8dp"
                     android:text="🍳"
                     android:tooltipText="Sniadanie"
                     app:shapeAppearance="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"
@@ -60,7 +61,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="16dp"
-                    android:layout_marginEnd="16dp"
+                    android:layout_marginEnd="8dp"
                     android:text="🥞"
                     android:tooltipText="Nalesniki"
                     app:shapeAppearance="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"
@@ -71,7 +72,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="16dp"
-                    android:layout_marginEnd="16dp"
+                    android:layout_marginEnd="8dp"
                     android:text="🥟"
                     android:tooltipText="Pierogi"
                     app:shapeAppearance="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"
@@ -82,7 +83,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="16dp"
-                    android:layout_marginEnd="16dp"
+                    android:layout_marginEnd="8dp"
                     android:text="🥗"
                     android:tooltipText="Salaty"
                     app:shapeAppearance="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"
@@ -93,7 +94,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="16dp"
-                    android:layout_marginEnd="16dp"
+                    android:layout_marginEnd="8dp"
                     android:text="☕"
                     android:tooltipText="Napoje"
                     app:shapeAppearance="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"
@@ -104,7 +105,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="16dp"
-                    android:layout_marginEnd="16dp"
+                    android:layout_marginEnd="8dp"
                     android:text="🍰"
                     android:tooltipText="Ciasta"
                     app:shapeAppearance="@style/ShapeAppearanceOverlay.Material3.FloatingActionButton"
@@ -142,9 +143,12 @@
             <com.google.android.material.card.MaterialCardView
                     android:layout_width="180dp"
                     android:layout_height="284dp"
-                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="8dp"
                     android:clickable="true"
                     android:focusable="true"
+                    app:cardBackgroundColor="?attr/colorPrimaryContainer"
+                    app:strokeWidth="0dp"
                     app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.ExtraLarge">
                 <LinearLayout
                         android:layout_width="match_parent"
@@ -152,8 +156,76 @@
                         android:orientation="vertical">
                     <com.google.android.material.imageview.ShapeableImageView
                             android:layout_width="match_parent"
-                            android:layout_height="129dp"
-                            android:layout_margin="4dp"
+                            android:layout_height="136dp"
+                            android:scaleType="centerInside"
+                            app:srcCompat="@drawable/foodiesfeed_com_avocado_chicken_salad"
+                            app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.ExtraLarge"/>
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Rolada schabowa"
+                                android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
+                                android:maxLines="2"
+                                android:layout_marginHorizontal="16dp"
+                                android:layout_marginTop="12dp"/>
+
+                        <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="@style/TextAppearance.Material3.BodySmall"
+                                android:layout_marginHorizontal="16dp"
+                                android:maxLines="2"
+                                android:text="Mieso"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="bottom"
+                            android:layout_gravity="bottom"
+                            android:orientation="horizontal"
+                            android:layout_marginHorizontal="16dp"
+                            android:layout_marginBottom="16dp">
+                        <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
+                                android:maxLines="1"
+                                android:ellipsize="end"
+                                android:text="$11"/>
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
+                                android:text="🍗"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                    android:layout_width="180dp"
+                    android:layout_height="284dp"
+                    android:layout_marginEnd="8dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardBackgroundColor="?attr/colorPrimaryContainer"
+                    app:strokeWidth="0dp"
+                    app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.ExtraLarge">
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                    <com.google.android.material.imageview.ShapeableImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="136dp"
                             android:scaleType="centerInside"
                             app:srcCompat="@drawable/foodiesfeed_com_avocado_chicken_salad"
                             app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.ExtraLarge"/>
@@ -212,6 +284,9 @@
                     android:layout_height="284dp"
                     android:layout_marginHorizontal="8dp"
                     android:clickable="true"
+                    android:focusable="true"
+                    app:cardBackgroundColor="?attr/colorPrimaryContainer"
+                    app:strokeWidth="0dp"
                     app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.ExtraLarge">
                 <LinearLayout
                         android:layout_width="match_parent"
@@ -219,75 +294,7 @@
                         android:orientation="vertical">
                     <com.google.android.material.imageview.ShapeableImageView
                             android:layout_width="match_parent"
-                            android:layout_height="129dp"
-                            android:layout_margin="4dp"
-                            android:scaleType="centerInside"
-                            app:srcCompat="@drawable/foodiesfeed_com_avocado_chicken_salad"
-                            app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.ExtraLarge"/>
-
-                    <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="0dp"
-                            android:layout_weight="1"
-                            android:orientation="vertical">
-                        <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Rolada schabowa"
-                                android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
-                                android:maxLines="2"
-                                android:layout_marginHorizontal="16dp"
-                                android:layout_marginTop="12dp"/>
-
-                        <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:textAppearance="@style/TextAppearance.Material3.BodySmall"
-                                android:layout_marginHorizontal="16dp"
-                                android:maxLines="2"
-                                android:text="Mieso"/>
-                    </LinearLayout>
-
-                    <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="bottom"
-                            android:layout_gravity="bottom"
-                            android:orientation="horizontal"
-                            android:layout_marginHorizontal="16dp"
-                            android:layout_marginBottom="16dp">
-                        <TextView
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
-                                android:maxLines="1"
-                                android:ellipsize="end"
-                                android:text="$11"/>
-
-                        <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
-                                android:text="🍗"/>
-                    </LinearLayout>
-                </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
-
-            <com.google.android.material.card.MaterialCardView
-                    android:layout_width="180dp"
-                    android:layout_height="284dp"
-                    android:layout_marginHorizontal="8dp"
-                    android:clickable="true"
-                    app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.ExtraLarge">
-                <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
-                    <com.google.android.material.imageview.ShapeableImageView
-                            android:layout_width="match_parent"
-                            android:layout_height="129dp"
-                            android:layout_margin="4dp"
+                            android:layout_height="136dp"
                             android:scaleType="centerInside"
                             app:srcCompat="@drawable/foodiesfeed_com_avocado_chicken_salad"
                             app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.ExtraLarge"/>
