@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import com.iw.jarosandroid.Facet;
+import com.iw.jarosandroid.Product;
 import com.iw.jarosandroid.R;
 import org.jetbrains.annotations.NotNull;
 

@@ -6,4 +6,5 @@ public interface Product {
     String ingredients();
     String category();
     String pln();
+    String image();
 }
