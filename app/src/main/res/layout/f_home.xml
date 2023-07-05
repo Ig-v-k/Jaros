@@ -282,7 +282,7 @@
             <com.google.android.material.card.MaterialCardView
                     android:layout_width="180dp"
                     android:layout_height="284dp"
-                    android:layout_marginHorizontal="8dp"
+                    android:layout_marginEnd="16dp"
                     android:clickable="true"
                     android:focusable="true"
                     app:cardBackgroundColor="?attr/colorPrimaryContainer"
@@ -348,5 +348,37 @@
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
         </LinearLayout>
+    </HorizontalScrollView>
+
+    <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <com.google.android.material.chip.ChipGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:singleLine="true">
+            <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Address"
+                    android:layout_marginStart="16dp"
+                    app:chipIcon="@drawable/outline_map_24"
+                    style="@style/Widget.Material3.Chip.Assist"/>
+
+            <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Godziny pracy"
+                    app:chipIcon="@drawable/outline_date_range_24"
+                    style="@style/Widget.Material3.Chip.Assist"/>
+
+            <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kontakt"
+                    app:chipIcon="@drawable/outline_call_24"
+                    android:layout_marginEnd="16dp"
+                    style="@style/Widget.Material3.Chip.Assist"/>
+        </com.google.android.material.chip.ChipGroup>
     </HorizontalScrollView>
 </LinearLayout>
