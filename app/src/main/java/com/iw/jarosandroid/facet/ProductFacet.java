@@ -7,8 +7,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import com.google.android.material.appbar.MaterialToolbar;
 import com.iw.jarosandroid.Facet;
+import com.iw.jarosandroid.MainActivity;
 import com.iw.jarosandroid.Product;
 import com.iw.jarosandroid.R;
 import org.jetbrains.annotations.NotNull;
@@ -40,7 +43,9 @@ public final class ProductFacet extends Fragment implements Facet {
     @Override
     public void onViewCreated(@NonNull @NotNull View view,
                               @Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
-
+        // toolbar
+        final MaterialToolbar vToolbar = vMain.findViewById(R.id.v_toolbar);
+        ((MainActivity) getActivity()).setSupportActionBar(vToolbar);
     }
 
     @Override

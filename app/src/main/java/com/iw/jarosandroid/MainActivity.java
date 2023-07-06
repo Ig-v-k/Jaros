@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.MenuItemCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
+import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.internal.TextWatcherAdapter;
 import com.google.android.material.search.SearchBar;
 import com.google.android.material.search.SearchView;
@@ -29,6 +30,10 @@ public final class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.a_main);
 
+        // toolbar
+        final MaterialToolbar vToolbar = findViewById(R.id.v_toolbar);
+        setSupportActionBar(vToolbar);
+
         final ArrayList<Product> products = new ArrayList<Product>() {{
             add(new SimpleProduct(1, "Rolada schabowa", "Mieso", "Meal", "14", "product1"));
             add(new SimpleProduct(2, "Mielony wieprzowy", "Mieso", "Meal", "14", ""));
@@ -44,7 +49,7 @@ public final class MainActivity extends AppCompatActivity {
             add(new SimpleProduct(12, "Kotlet pozarski", "Mieso", "Meal", "14", ""));
         }};
 
-        final ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, products);
+        final ArrayAdapter<Product> adapter = new ArrayAdapter<>(this, R.layout.c_search_item, products);
 
         final ListView vList = new ListView(MainActivity.this);
         vList.setAdapter(adapter);
@@ -72,7 +77,8 @@ public final class MainActivity extends AppCompatActivity {
 
         vList.setOnItemClickListener((parent, view, position, id) -> {
             vSearchView.hide();
-            new ContainerRoute(getSupportFragmentManager()).forward(new ProductFacet(null));
+            final Product product = adapter.getItem(position);
+            new ContainerRoute(getSupportFragmentManager()).forward(new ProductFacet(product));
         });
 
         new ContainerRoute(getSupportFragmentManager()).replace(new HomeFacet());

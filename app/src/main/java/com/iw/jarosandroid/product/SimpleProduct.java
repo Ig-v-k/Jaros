@@ -1,6 +1,7 @@
 package com.iw.jarosandroid.product;
 
 import com.iw.jarosandroid.Product;
+import org.jetbrains.annotations.NotNull;
 
 public final class SimpleProduct implements Product {
 
@@ -48,5 +49,11 @@ public final class SimpleProduct implements Product {
     @Override
     public String image() {
         return image;
+    }
+
+    @NotNull
+    @Override
+    public String toString() {
+        return name;
     }
 }
