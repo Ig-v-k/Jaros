@@ -16,6 +16,7 @@ public final class ContainerRoute implements Route {
     public void forward(Facet facet) {
         manager.beginTransaction()
                 .setReorderingAllowed(true)
+                .addToBackStack(facet.tag())
                 .add(R.id.v_main_container, facet.fragment(), facet.tag())
                 .commit();
     }

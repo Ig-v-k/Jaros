@@ -7,13 +7,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import com.google.android.material.appbar.MaterialToolbar;
-import com.iw.jarosandroid.Facet;
-import com.iw.jarosandroid.MainActivity;
-import com.iw.jarosandroid.Product;
-import com.iw.jarosandroid.R;
+import com.iw.jarosandroid.*;
 import org.jetbrains.annotations.NotNull;
 
 public final class ProductFacet extends Fragment implements Facet {
@@ -21,9 +17,11 @@ public final class ProductFacet extends Fragment implements Facet {
     private Context context;
     private View vMain;
     private final Product product;
+    private final Route route;
 
-    public ProductFacet(Product product) {
+    public ProductFacet(Product product, Route route) {
         this.product = product;
+        this.route = route;
     }
 
     @Override
@@ -45,7 +43,9 @@ public final class ProductFacet extends Fragment implements Facet {
                               @Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
         // toolbar
         final MaterialToolbar vToolbar = vMain.findViewById(R.id.v_toolbar);
-        ((MainActivity) getActivity()).setSupportActionBar(vToolbar);
+        vToolbar.setNavigationOnClickListener(v -> route.back());
+
+        ((MainActivity) getActivity()).getSupportActionBar().hide();
     }
 
     @Override
@@ -65,6 +65,6 @@ public final class ProductFacet extends Fragment implements Facet {
 
     @Override
     public Facet self() {
-        return new ProductFacet(product);
+        return new ProductFacet(product, route);
     }
 }

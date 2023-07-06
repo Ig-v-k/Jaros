@@ -7,14 +7,9 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.LinearLayout;
 import android.widget.ListView;
-import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.view.MenuItemCompat;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.google.android.material.appbar.MaterialToolbar;
-import com.google.android.material.internal.TextWatcherAdapter;
 import com.google.android.material.search.SearchBar;
 import com.google.android.material.search.SearchView;
 import com.iw.jarosandroid.facet.HomeFacet;
@@ -78,7 +73,8 @@ public final class MainActivity extends AppCompatActivity {
         vList.setOnItemClickListener((parent, view, position, id) -> {
             vSearchView.hide();
             final Product product = adapter.getItem(position);
-            new ContainerRoute(getSupportFragmentManager()).forward(new ProductFacet(product));
+            final ContainerRoute containerRoute = new ContainerRoute(getSupportFragmentManager());
+            containerRoute.forward(new ProductFacet(product, containerRoute));
         });
 
         new ContainerRoute(getSupportFragmentManager()).replace(new HomeFacet());
