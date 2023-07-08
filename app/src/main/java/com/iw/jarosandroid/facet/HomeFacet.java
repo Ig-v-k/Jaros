@@ -43,7 +43,7 @@ public final class HomeFacet extends Fragment implements Facet {
                               @Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
         final MaterialCardView materialCardView = vMain.findViewById(R.id.v_productTest);
         materialCardView.setOnClickListener(v -> {
-            final Product product = new SimpleProduct(1, "A", "", "", "", "");
+            final Product product = new SimpleProduct(1, "Kotlet mielony", "", "", "", "");
             final ContainerRoute containerRoute = new ContainerRoute(((MainActivity)context).getSupportFragmentManager());
             containerRoute.forward(new ProductFacet(product, containerRoute));
         });

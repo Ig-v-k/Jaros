@@ -1,45 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout
+<LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="?android:attr/colorBackground">
+        android:background="?android:attr/colorBackground"
+        android:orientation="vertical">
+    <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/v_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            app:titleCentered="true"
+            app:navigationIcon="@drawable/outline_arrow_back_24"
+            app:menu="@menu/m_product"/>
+
     <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
         <com.google.android.material.imageview.ShapeableImageView
                 android:layout_width="match_parent"
-                android:layout_height="300dp"
+                android:layout_height="400dp"
                 android:src="@drawable/product1"
                 android:scaleType="centerCrop"
                 android:contentDescription="Product image"
+                android:layout_marginHorizontal="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="2dp"
                 app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.ExtraLarge"/>
 
         <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_margin="4dp"
                 android:orientation="horizontal">
-            <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Kotlet zapiekany"
-                    android:textAppearance="@style/TextAppearance.Material3.DisplayMedium"/>
-            <TextView
+            <com.google.android.material.button.MaterialButton
+                    style="@style/Widget.Material3.Button.TextButton.Dialog.Icon"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="19 zl."
-                    android:textAppearance="@style/TextAppearance.Material3.DisplayMedium"/>
+                    android:text="Na wynos"
+                    android:padding="24dp"
+                    android:layout_marginEnd="4dp"
+                    app:icon="@drawable/outline_favorite_border_24"
+                    app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.ExtraLarge"/>
+
+            <com.google.android.material.button.MaterialButton
+                    style="@style/Widget.Material3.Button.TextButton.Dialog.Icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="24dp"
+                    android:text="Obiad"
+                    app:icon="@drawable/outline_coffee_24"
+                    app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.ExtraLarge"/>
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+            <com.google.android.material.button.MaterialButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".5"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginBottom="4dp"
+                    android:text="$3,45"
+                    android:textAppearance="@style/TextAppearance.Material3.DisplayLarge"
+                    app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.ExtraLarge"/>
+
+            <com.google.android.material.button.MaterialButton
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight=".5"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginBottom="4dp"
+                    android:text="14 zl"
+                    android:textAppearance="@style/TextAppearance.Material3.DisplayLarge"
+                    app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.ExtraLarge"/>
         </LinearLayout>
     </LinearLayout>
-
-    <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/v_toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:navigationIcon="@drawable/outline_arrow_back_24"
-            app:menu="@menu/m_product"
-            android:fitsSystemWindows="true"/>
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</LinearLayout>

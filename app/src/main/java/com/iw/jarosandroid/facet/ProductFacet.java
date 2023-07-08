@@ -21,6 +21,11 @@ public final class ProductFacet extends Fragment implements Facet {
     private final Product product;
     private final Route route;
 
+    public ProductFacet() {
+        this.product = new SimpleProduct(1, "Kotlet mielony", "", "", "", "");
+        this.route = null;
+    }
+
     public ProductFacet(Product product, Route route) {
         this.product = product;
         this.route = route;
@@ -46,6 +51,7 @@ public final class ProductFacet extends Fragment implements Facet {
         // toolbar
         final MaterialToolbar vToolbar = vMain.findViewById(R.id.v_toolbar);
         vToolbar.setNavigationOnClickListener(v -> route.back());
+        vToolbar.setTitle(product.name());
     }
 
     @Override
