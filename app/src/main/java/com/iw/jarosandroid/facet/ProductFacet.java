@@ -2,14 +2,16 @@ package com.iw.jarosandroid.facet;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
+import android.view.*;
+import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
 import androidx.fragment.app.Fragment;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.iw.jarosandroid.*;
+import com.iw.jarosandroid.product.SimpleProduct;
+import com.iw.jarosandroid.route.ContainerRoute;
 import org.jetbrains.annotations.NotNull;
 
 public final class ProductFacet extends Fragment implements Facet {
@@ -44,13 +46,11 @@ public final class ProductFacet extends Fragment implements Facet {
         // toolbar
         final MaterialToolbar vToolbar = vMain.findViewById(R.id.v_toolbar);
         vToolbar.setNavigationOnClickListener(v -> route.back());
-
-        ((MainActivity) getActivity()).getSupportActionBar().hide();
     }
 
     @Override
     public String tag() {
-        return "ProductFacet:" + product.id();
+        return "ProductFacet:" + (product == null ? 1 : product.id());
     }
 
     @Override

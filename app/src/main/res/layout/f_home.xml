@@ -5,6 +5,27 @@
         android:layout_height="match_parent"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:orientation="vertical">
+    <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/v_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            app:menu="@menu/m_main"/>
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🙌 Bar mleczny, zapraszamy! "
+            android:layout_marginHorizontal="16dp"
+            android:textAppearance="@style/TextAppearance.Material3.DisplayMedium"/>
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pyszna i Tania Kuchnia Polska"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="16dp"
+            android:textAppearance="@style/TextAppearance.Material3.TitleLarge"/>
 
     <TextView
             android:layout_width="match_parent"
@@ -141,6 +162,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
             <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/v_productTest"
                     android:layout_width="180dp"
                     android:layout_height="284dp"
                     android:layout_marginStart="16dp"
