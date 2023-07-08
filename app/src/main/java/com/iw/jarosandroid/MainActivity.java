@@ -35,6 +35,20 @@ public final class MainActivity extends AppCompatActivity {
 
         if (savedInstanceState == null) {
             new ContainerRoute(getSupportFragmentManager()).replace(new HomeFacet());
+
+            Window window = this.getWindow();
+            // fit bars
+//            WindowCompat.setDecorFitsSystemWindows(window, false);
+
+            // bars color
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                window.setStatusBarColor(Color.TRANSPARENT);
+                window.setNavigationBarColor(Color.TRANSPARENT);
+            }
+
+            // system ui color
+            WindowInsetsControllerCompat insetsController = WindowCompat.getInsetsController(window, window.getDecorView());
+            insetsController.setAppearanceLightStatusBars(false);
         }
     }
 }
