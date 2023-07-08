@@ -43,7 +43,7 @@
                     android:text="Na wynos"
                     android:padding="24dp"
                     android:layout_marginEnd="4dp"
-                    app:icon="@drawable/outline_favorite_border_24"
+                    app:icon="@drawable/outline_takeout_dining_24"
                     app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.ExtraLarge"/>
 
             <com.google.android.material.button.MaterialButton
@@ -52,7 +52,7 @@
                     android:layout_height="wrap_content"
                     android:padding="24dp"
                     android:text="Obiad"
-                    app:icon="@drawable/outline_coffee_24"
+                    app:icon="@drawable/outline_restaurant_menu_24"
                     app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.ExtraLarge"/>
         </LinearLayout>
 
