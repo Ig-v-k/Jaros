@@ -23,9 +23,15 @@ public final class ProductsFacet extends Fragment implements Facet {
     private Context context;
     private View vMain;
     private final Route route;
+    private final String category;
 
     public ProductsFacet(Route route) {
+        this(route, ""  );
+    }
+
+    public ProductsFacet(Route route, String category) {
         this.route = route;
+        this.category = category;
     }
 
     @Override
@@ -48,6 +54,7 @@ public final class ProductsFacet extends Fragment implements Facet {
                               @Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
         final Products productsLocal = new ConstProducts(new SQLiteHelper(context));
         final List<Product> products = productsLocal.list();
+        products.removeIf(product -> !product.category().equals(category));
 
         final MaterialToolbar vToolbar = vMain.findViewById(R.id.v_toolbar);
         vToolbar.setNavigationOnClickListener(v -> route.back());
@@ -77,6 +84,6 @@ public final class ProductsFacet extends Fragment implements Facet {
 
     @Override
     public Facet self() {
-        return new ProductsFacet(route);
+        return new ProductsFacet(route, category);
     }
 }

@@ -44,6 +44,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
             <Button
+                    android:id="@+id/v_meals"
                     style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
