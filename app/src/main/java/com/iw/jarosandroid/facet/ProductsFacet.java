@@ -54,6 +54,10 @@ public final class ProductsFacet extends Fragment implements Facet {
 
         final ListView vList = vMain.findViewById(R.id.v_list);
         vList.setAdapter(new ProductsListAdapter(context, products));
+        vList.setOnItemClickListener((parent, view1, position, id) -> {
+            final Product product = products.get(position);
+            route.forward(new ProductFacet(product, route));
+        });
     }
 
     @Override
