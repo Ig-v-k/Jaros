@@ -66,14 +66,14 @@
                 android:orientation="horizontal">
             <com.google.android.material.button.MaterialButton
                     style="@style/Widget.Material3.Button.TonalButton"
+                    android:id="@+id/v_amount"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight=".5"
                     android:layout_marginStart="4dp"
                     android:layout_marginEnd="2dp"
                     android:layout_marginBottom="4dp"
-                    android:text="14 zl"
-                    android:textAppearance="@style/TextAppearance.Material3.DisplayLarge"
+                    android:textAppearance="@style/TextAppearance.Material3.DisplayMedium"
                     app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.ExtraLarge"/>
 
             <com.google.android.material.card.MaterialCardView
@@ -103,6 +103,7 @@
                             android:gravity="center_horizontal"/>
 
                     <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/v_image_recommend"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:layout_weight="1"

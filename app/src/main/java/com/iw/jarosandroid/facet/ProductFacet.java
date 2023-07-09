@@ -9,6 +9,8 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.fragment.app.Fragment;
 import com.google.android.material.appbar.MaterialToolbar;
+import com.google.android.material.button.MaterialButton;
+import com.google.android.material.imageview.ShapeableImageView;
 import com.iw.jarosandroid.*;
 import com.iw.jarosandroid.product.SimpleProduct;
 import com.iw.jarosandroid.route.ContainerRoute;
@@ -53,6 +55,17 @@ public final class ProductFacet extends Fragment implements Facet {
         vToolbar.setNavigationOnClickListener(v -> route.back());
         vToolbar.setTitle(product.name());
         vToolbar.setSubtitle(product.category());
+
+        final ShapeableImageView vImage = vMain.findViewById(R.id.v_image);
+        vImage.setImageResource(
+                context.getResources().getIdentifier(
+                        product.name().toLowerCase().trim().replace(" ", ""), "drawable", context.getPackageName()));
+
+        final MaterialButton vAmount = vMain.findViewById(R.id.v_amount);
+        vAmount.setText(product.pln() + " zl");
+
+        final ShapeableImageView vImageRecommend = vMain.findViewById(R.id.v_image_recommend);
+        vImageRecommend.setImageResource(context.getResources().getIdentifier("roladaschabowa", "drawable", context.getPackageName()));
     }
 
     @Override
