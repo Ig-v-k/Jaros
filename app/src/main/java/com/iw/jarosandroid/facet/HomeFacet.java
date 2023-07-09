@@ -51,7 +51,7 @@ public final class HomeFacet extends Fragment implements Facet {
                               @Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
         final Products productsLocal = new ConstProducts(new SQLiteHelper(context));
         final List<Product> productList = productsLocal.list();
-        final List<Product> products = productList.subList(3, 7);
+        final List<Product> products = productList.subList(0, 3);
 
         final RecyclerView vProducts = vMain.findViewById(R.id.v_products);
         vProducts.setItemAnimator(new DefaultItemAnimator());

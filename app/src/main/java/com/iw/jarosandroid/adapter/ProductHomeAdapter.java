@@ -54,7 +54,7 @@ public final class ProductHomeAdapter extends RecyclerView.Adapter<ProductHomeAd
         holder.title.setText(product.name());
         holder.subtitle.setText(product.category());
         holder.pln.setText(product.pln() + " zl");
-        holder.taste.setText("🍗");
+        holder.taste.setText("🌶");
         holder.image.setImageResource(
                 context.getResources().getIdentifier(
                         product.name().toLowerCase().trim().replace(" ", ""), "drawable", context.getPackageName()));
