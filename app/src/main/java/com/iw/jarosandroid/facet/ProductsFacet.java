@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.iw.jarosandroid.*;
 import com.iw.jarosandroid.adapter.ProductHomeAdapter;
+import com.iw.jarosandroid.adapter.ProductsListAdapter;
 import com.iw.jarosandroid.database.SQLiteHelper;
 import com.iw.jarosandroid.products.ConstProducts;
 import org.jetbrains.annotations.NotNull;
