@@ -20,7 +20,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="136dp"
                 android:scaleType="centerCrop"
-                app:srcCompat="@drawable/product1"
                 app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.ExtraLarge"/>
 
         <LinearLayout

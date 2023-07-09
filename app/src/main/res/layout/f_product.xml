@@ -25,7 +25,6 @@
                 android:id="@+id/v_image"
                 android:layout_width="match_parent"
                 android:layout_height="400dp"
-                android:src="@drawable/product1"
                 android:scaleType="centerCrop"
                 android:contentDescription="Product image"
                 android:layout_marginHorizontal="4dp"
@@ -109,7 +108,6 @@
                             android:layout_weight="1"
                             android:layout_marginHorizontal="4dp"
                             android:scaleType="centerCrop"
-                            app:srcCompat="@drawable/product1"
                             app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.ExtraLarge"/>
 
                     <LinearLayout
