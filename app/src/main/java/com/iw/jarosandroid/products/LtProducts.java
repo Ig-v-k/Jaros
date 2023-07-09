@@ -6,6 +6,7 @@ import android.database.sqlite.SQLiteDatabase;
 import com.iw.jarosandroid.Container;
 import com.iw.jarosandroid.Product;
 import com.iw.jarosandroid.Products;
+import com.iw.jarosandroid.product.LtProduct;
 
 import java.util.ArrayList;
 import java.util.List;
