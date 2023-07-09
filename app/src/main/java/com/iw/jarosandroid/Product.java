@@ -6,4 +6,5 @@ public interface Product {
     String category();
     String ingredients();
     double pln();
+    boolean favorite();
 }

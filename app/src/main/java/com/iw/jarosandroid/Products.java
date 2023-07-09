@@ -4,5 +4,5 @@ import java.util.List;
 
 public interface Products {
     List<Product> list();
-    void add(final String name, final String category, final String ingredients, final double pln);
+    void add(final String name, final String category, final String ingredients, final double pln, boolean favorite);
 }

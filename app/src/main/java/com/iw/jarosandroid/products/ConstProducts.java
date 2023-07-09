@@ -39,7 +39,8 @@ public final class ConstProducts implements Products {
                                 cursor.getString(cursor.getColumnIndexOrThrow("name")),
                                 cursor.getString(cursor.getColumnIndexOrThrow("category")),
                                 cursor.getString(cursor.getColumnIndexOrThrow("ingredients")),
-                                cursor.getDouble(cursor.getColumnIndexOrThrow("pln")))
+                                cursor.getDouble(cursor.getColumnIndexOrThrow("pln")),
+                                cursor.getInt(cursor.getColumnIndexOrThrow("favorite")) == 1)
                 );
                 cursor.moveToNext();
             }
@@ -48,7 +49,7 @@ public final class ConstProducts implements Products {
     }
 
     @Override
-    public void add(String name, String category, String ingredients, double pln) {
-        origin.add(name, category, ingredients, pln);
+    public void add(String name, String category, String ingredients, double pln, boolean favorite) {
+        origin.add(name, category, ingredients, pln, favorite);
     }
 }

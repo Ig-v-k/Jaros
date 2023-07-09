@@ -10,13 +10,15 @@ public final class SimpleProduct implements Product {
     private final String ingredients;
     private final String category;
     private final double pln;
+    private final boolean favorite;
 
-    public SimpleProduct(int id, String name, String ingredients, String category, double pln) {
+    public SimpleProduct(int id, String name, String ingredients, String category, double pln, boolean favorite) {
         this.id = id;
         this.name = name;
         this.ingredients = ingredients;
         this.category = category;
         this.pln = pln;
+        this.favorite = favorite;
     }
 
     @Override
@@ -42,6 +44,11 @@ public final class SimpleProduct implements Product {
     @Override
     public double pln() {
         return pln;
+    }
+
+    @Override
+    public boolean favorite() {
+        return favorite;
     }
 
     @NotNull

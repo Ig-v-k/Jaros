@@ -22,7 +22,7 @@ public final class ProductFacet extends Fragment implements Facet {
     private final Route route;
 
     public ProductFacet() {
-        this.product = new SimpleProduct(1, "Kotlet mielony", "", "Mieso", 14.0);
+        this.product = new SimpleProduct(1, "Kotlet mielony", "", "Mieso", 14.0, false);
         this.route = null;
     }
 

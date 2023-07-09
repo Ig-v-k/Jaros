@@ -94,4 +94,22 @@ public final class LtProduct implements Product {
             }
         }
     }
+
+    @Override
+    public boolean favorite() {
+        final String query = "SELECT favorite FROM product_table WHERE _id = ?";
+        final String[] params = new String[]{String.valueOf(id)};
+        try (final SQLiteDatabase database = container.read();
+             final Cursor cursor = database.rawQuery(query, params)) {
+            if (cursor.getCount() > 0) {
+                cursor.moveToFirst();
+                return cursor.getInt(cursor.getColumnIndexOrThrow("favorite")) == 1;
+            } else {
+                final String mes = String.format(
+                        "Cannot find column title with query: \"%s\", and arguments: %s",
+                        query, Arrays.toString(params));
+                throw new RuntimeException(mes);
+            }
+        }
+    }
 }

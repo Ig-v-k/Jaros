@@ -35,13 +35,14 @@ public final class LtProducts implements Products {
     }
 
     @Override
-    public void add(String name, String category, String ingredients, double pln) {
+    public void add(String name, String category, String ingredients, double pln, boolean favorite) {
         try (final SQLiteDatabase database = container.read()) {
             final ContentValues values = new ContentValues();
             values.put("name", name);
             values.put("category", category);
             values.put("ingredients", ingredients);
             values.put("pln", pln);
+            values.put("favorite", favorite ? 1 : -1);
             database.insertOrThrow("product_table", null, values);
         }
     }
