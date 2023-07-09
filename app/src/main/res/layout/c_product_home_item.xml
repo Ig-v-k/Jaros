@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/v_productTest"
+        android:layout_width="180dp"
+        android:layout_height="284dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardBackgroundColor="?attr/colorPrimaryContainer"
+        app:strokeWidth="0dp"
+        app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.ExtraLarge">
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+        <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/v_image"
+                android:layout_width="match_parent"
+                android:layout_height="136dp"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/product1"
+                app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.ExtraLarge"/>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+            <TextView
+                    android:id="@+id/v_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Rolada schabowa"
+                    android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
+                    android:maxLines="2"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="12dp"/>
+
+            <TextView
+                    android:id="@+id/v_subtitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextAppearance.Material3.BodySmall"
+                    android:layout_marginHorizontal="16dp"
+                    android:maxLines="2"
+                    android:text="Mieso"/>
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:layout_gravity="bottom"
+                android:orientation="horizontal"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginBottom="16dp">
+            <TextView
+                    android:id="@+id/v_amount"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:text="$11"/>
+
+            <TextView
+                    android:id="@+id/v_taste"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
+                    android:text="🍗"/>
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>
