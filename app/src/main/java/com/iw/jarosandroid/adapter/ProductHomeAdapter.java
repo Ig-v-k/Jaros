@@ -12,11 +12,9 @@ import com.iw.jarosandroid.Product;
 import com.iw.jarosandroid.R;
 import com.iw.jarosandroid.Route;
 import com.iw.jarosandroid.facet.ProductFacet;
-import com.iw.jarosandroid.route.ContainerRoute;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
-import java.util.Locale;
 
 public final class ProductHomeAdapter extends RecyclerView.Adapter<ProductHomeAdapter.Holder> {
     private final Context context;
@@ -55,7 +53,7 @@ public final class ProductHomeAdapter extends RecyclerView.Adapter<ProductHomeAd
         final Product product = products.get(position);
         holder.title.setText(product.name());
         holder.subtitle.setText(product.category());
-        holder.pln.setText(String.valueOf(product.pln()));
+        holder.pln.setText(String.valueOf(product.pln()) + " zl");
         holder.taste.setText("🍗");
         holder.image.setImageResource(
                 context.getResources().getIdentifier(
