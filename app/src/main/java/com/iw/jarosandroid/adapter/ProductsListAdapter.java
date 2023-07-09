@@ -32,13 +32,21 @@ public final class ProductsListAdapter extends ArrayAdapter<Product> {
             vMain = LayoutInflater.from(context).inflate(R.layout.c_products_item, parent, false);
         }
 
+        final Product product = products.get(position);
+
         final ShapeableImageView vImage = vMain.findViewById(R.id.v_image);
+        vImage.setImageResource(
+                context.getResources().getIdentifier(
+                        product.name().toLowerCase().trim().replace(" ", ""), "drawable", context.getPackageName()));
 
         final TextView vTitle = vMain.findViewById(R.id.v_title);
+        vTitle.setText(product.name());
 
         final TextView vSubtitle = vMain.findViewById(R.id.v_subtitle);
+        vSubtitle.setText(product.category());
 
         final TextView vAmount = vMain.findViewById(R.id.v_amount);
+        vAmount.setText(product.pln() + " zl");
 
         return vMain;
     }

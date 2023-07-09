@@ -14,11 +14,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.iw.jarosandroid.*;
 import com.iw.jarosandroid.adapter.ProductHomeAdapter;
 import com.iw.jarosandroid.database.SQLiteHelper;
-import com.iw.jarosandroid.product.SimpleProduct;
 import com.iw.jarosandroid.products.ConstProducts;
 import org.jetbrains.annotations.NotNull;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public final class HomeFacet extends Fragment implements Facet {
