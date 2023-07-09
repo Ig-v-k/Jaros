@@ -9,6 +9,7 @@ import android.widget.ListView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import com.google.android.material.appbar.MaterialToolbar;
 import com.iw.jarosandroid.*;
 import com.iw.jarosandroid.adapter.ProductsListAdapter;
 import com.iw.jarosandroid.database.SQLiteHelper;
@@ -47,6 +48,10 @@ public final class ProductsFacet extends Fragment implements Facet {
                               @Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
         final Products productsLocal = new ConstProducts(new SQLiteHelper(context));
         final List<Product> products = productsLocal.list();
+
+        final MaterialToolbar vToolbar = vMain.findViewById(R.id.v_toolbar);
+        vToolbar.setNavigationOnClickListener(v -> route.back());
+
         final ListView vList = vMain.findViewById(R.id.v_list);
         vList.setAdapter(new ProductsListAdapter(context, products));
     }

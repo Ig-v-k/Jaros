@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import com.google.android.material.button.MaterialButton;
 import com.iw.jarosandroid.*;
 import com.iw.jarosandroid.adapter.ProductHomeAdapter;
 import com.iw.jarosandroid.database.SQLiteHelper;
@@ -49,12 +50,15 @@ public final class HomeFacet extends Fragment implements Facet {
                               @Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
         final Products productsLocal = new ConstProducts(new SQLiteHelper(context));
         final List<Product> productList = productsLocal.list();
-        final List<Product> products = productList.subList(0, 1);
+        final List<Product> products = productList.subList(0, 4);
 
         final RecyclerView vProducts = vMain.findViewById(R.id.v_products);
         vProducts.setItemAnimator(new DefaultItemAnimator());
         vProducts.setAdapter(new ProductHomeAdapter(context, products, route));
         vProducts.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false));
+
+        final MaterialButton vAll = vMain.findViewById(R.id.v_see_all);
+        vAll.setOnClickListener(v -> route.forward(new ProductsFacet(route)));
     }
 
     @Override

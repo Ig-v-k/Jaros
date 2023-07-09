@@ -159,6 +159,7 @@
                 android:layout_marginStart="16dp"/>
 
         <Button
+                android:id="@+id/v_see_all"
                 style="@style/Widget.Material3.Button.TextButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
