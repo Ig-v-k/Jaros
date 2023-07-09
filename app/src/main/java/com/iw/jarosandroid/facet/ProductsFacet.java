@@ -27,8 +27,7 @@ public final class ProductsFacet extends Fragment implements Facet {
     private View vMain;
     private final Route route;
 
-    public ProductsFacet(List<Product> products, Route route) {
-        this.products = products;
+    public ProductsFacet(Route route) {
         this.route = route;
     }
 
@@ -73,6 +72,6 @@ public final class ProductsFacet extends Fragment implements Facet {
 
     @Override
     public Facet self() {
-        return ;
+        return new ProductsFacet(route);
     }
 }
