@@ -31,7 +31,7 @@ public final class ProductsTest extends AbstractContext {
         products.add("Kotlet pozarski", "Mieso", "", 14.0, false);
         products.add("Kotlet drobiowy", "Mieso", "", 14.0, false);
         products.add("Kotlet mielony", "Mieso", "", 14.0, false);
-        products.add("Kotlet mielony wiepszowy", "Mieso", "", 14.0, false);
+        products.add("Kotlet mielony wieprzowy", "Mieso", "", 14.0, false);
         products.add("Kotlet schabowy", "Mieso", "", 14.0, false);
         products.add("Kotlet zapiekany", "Mieso", "", 14.0, false);
         products.add("Filet z drobiu", "Mieso", "", 14.0, false);

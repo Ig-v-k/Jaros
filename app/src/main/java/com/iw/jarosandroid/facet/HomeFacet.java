@@ -49,12 +49,13 @@ public final class HomeFacet extends Fragment implements Facet {
     @Override
     public void onViewCreated(@NonNull @NotNull View view,
                               @Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
-        final Products products = new ConstProducts(new SQLiteHelper(context));
-        final List<Product> productList = products.list();
+        final Products productsLocal = new ConstProducts(new SQLiteHelper(context));
+        final List<Product> productList = productsLocal.list();
+        final List<Product> products = productList.subList(3, 7);
 
         final RecyclerView vProducts = vMain.findViewById(R.id.v_products);
         vProducts.setItemAnimator(new DefaultItemAnimator());
-        vProducts.setAdapter(new ProductHomeAdapter(context, productList, route));
+        vProducts.setAdapter(new ProductHomeAdapter(context, products, route));
         vProducts.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false));
     }
 
