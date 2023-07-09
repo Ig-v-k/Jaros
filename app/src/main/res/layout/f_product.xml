@@ -51,7 +51,7 @@
                     app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.ExtraLarge"/>
 
             <com.google.android.material.button.MaterialButton
-                    android:id=""
+                    android:id="@+id/v_dinner"
                     style="@style/Widget.Material3.Button.TextButton.Dialog.Icon"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

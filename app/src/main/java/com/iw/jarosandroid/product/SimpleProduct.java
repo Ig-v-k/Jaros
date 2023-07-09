@@ -10,15 +10,13 @@ public final class SimpleProduct implements Product {
     private final String ingredients;
     private final String category;
     private final double pln;
-    private final String image;
 
-    public SimpleProduct(int id, String name, String ingredients, String category, double pln, String image) {
+    public SimpleProduct(int id, String name, String ingredients, String category, double pln) {
         this.id = id;
         this.name = name;
         this.ingredients = ingredients;
         this.category = category;
         this.pln = pln;
-        this.image = image;
     }
 
     @Override
@@ -44,11 +42,6 @@ public final class SimpleProduct implements Product {
     @Override
     public double pln() {
         return pln;
-    }
-
-    @Override
-    public String image() {
-        return image;
     }
 
     @NotNull

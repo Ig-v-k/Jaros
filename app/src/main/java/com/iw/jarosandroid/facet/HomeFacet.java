@@ -5,23 +5,32 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import com.google.android.material.card.MaterialCardView;
+import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import com.iw.jarosandroid.Facet;
-import com.iw.jarosandroid.MainActivity;
 import com.iw.jarosandroid.Product;
 import com.iw.jarosandroid.R;
+import com.iw.jarosandroid.Route;
+import com.iw.jarosandroid.adapter.ProductHomeAdapter;
 import com.iw.jarosandroid.product.SimpleProduct;
-import com.iw.jarosandroid.route.ContainerRoute;
 import org.jetbrains.annotations.NotNull;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public final class HomeFacet extends Fragment implements Facet {
 
     private Context context;
     private View vMain;
+    private final Route route;
+
+    public HomeFacet(Route route) {
+        this.route = route;
+    }
 
     @Override
     public void onAttach(@NonNull Context context) {
@@ -41,12 +50,16 @@ public final class HomeFacet extends Fragment implements Facet {
     @Override
     public void onViewCreated(@NonNull @NotNull View view,
                               @Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
-        final MaterialCardView materialCardView = vMain.findViewById(R.id.v_productTest);
-        materialCardView.setOnClickListener(v -> {
-            final Product product = new SimpleProduct(1, "Kotlet mielony", "", "Mieso", 14.0, "");
-            final ContainerRoute containerRoute = new ContainerRoute(((MainActivity)context).getSupportFragmentManager());
-            containerRoute.forward(new ProductFacet(product, containerRoute));
-        });
+        final List<Product> products = new ArrayList<Product>(){{
+            add(new SimpleProduct(1, "Rolada schabowa", "", "Mieso", 14.0));
+            add(new SimpleProduct(2, "Kotlet mielony", "", "Mieso", 14.0));
+            add(new SimpleProduct(3, "Devolay", "", "Mieso", 14.0));
+        }};
+
+        final RecyclerView vProducts = vMain.findViewById(R.id.v_products);
+        vProducts.setItemAnimator(new DefaultItemAnimator());
+        vProducts.setAdapter(new ProductHomeAdapter(context, products, route));
+        vProducts.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false));
     }
 
     @Override
@@ -66,6 +79,6 @@ public final class HomeFacet extends Fragment implements Facet {
 
     @Override
     public Facet self() {
-        return new HomeFacet();
+        return new HomeFacet(route);
     }
 }
