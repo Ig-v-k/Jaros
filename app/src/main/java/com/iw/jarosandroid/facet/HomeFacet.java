@@ -62,6 +62,9 @@ public final class HomeFacet extends Fragment implements Facet {
 
         final MaterialButton vMeals = vMain.findViewById(R.id.v_meals);
         vMeals.setOnClickListener(v -> route.forward(new ProductsFacet(route, "Mieso")));
+
+        final MaterialButton vSoups = vMain.findViewById(R.id.v_soups);
+        vSoups.setOnClickListener(v -> route.forward(new ProductsFacet(route, "Zupa")));
     }
 
     @Override

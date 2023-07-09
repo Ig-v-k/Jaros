@@ -44,8 +44,8 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
             <Button
-                    android:id="@+id/v_meals"
                     style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
+                    android:id="@+id/v_meals"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="16dp"
@@ -58,6 +58,7 @@
 
             <Button
                     style="@style/Widget.Material3.Button.IconButton.Filled.Tonal"
+                    android:id="@+id/v_soups"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="16dp"
