@@ -43,7 +43,7 @@ public final class ProductsTest extends AbstractContext {
         products.add("Rolada schabowa", "Mieso", "", 14.0, false);
         products.add("Pomidorowa z makaronem", "Zupa", "", 8.0, false);
         products.add("Barszcz ukrainski", "Zupa", "", 8.0, false);
-        products.add("Gryrosowa", "Zupa", "", 8.0, false);
+        products.add("Gyrosowa", "Zupa", "", 8.0, false);
         products.add("Meksykanska", "Zupa", "", 8.0, false);
         products.add("Rosol", "Zupa", "", 8.0, false);
         products.add("Pieczarkowa", "Zupa", "", 8.0, false);
