@@ -4,5 +4,6 @@
     <item android:id="@+id/m_theme"
           android:title="Theme"
           android:icon="@drawable/outline_dark_mode_24"
+          android:visible="false"
           app:showAsAction="always"/>
 </menu>
