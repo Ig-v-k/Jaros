@@ -64,8 +64,9 @@ public final class ProductFacet extends Fragment implements Facet {
         final MaterialButton vAmount = vMain.findViewById(R.id.v_amount);
         vAmount.setText(product.pln() + " zl");
 
-        final ShapeableImageView vImageRecommend = vMain.findViewById(R.id.v_image_recommend);
-        vImageRecommend.setImageResource(context.getResources().getIdentifier("roladaschabowa", "drawable", context.getPackageName()));
+        final MaterialButton vAmountSet = vMain.findViewById(R.id.v_amount_set);
+        final double amountSet = product.pln() + 4;
+        vAmountSet.setText(String.format("Zestaw %s zl", amountSet));
     }
 
     @Override

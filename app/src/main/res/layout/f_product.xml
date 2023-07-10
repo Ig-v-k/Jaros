@@ -24,7 +24,8 @@
         <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/v_image"
                 android:layout_width="match_parent"
-                android:layout_height="400dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
                 android:scaleType="centerCrop"
                 android:contentDescription="Product image"
                 android:layout_marginHorizontal="4dp"
@@ -48,85 +49,36 @@
                     android:layout_marginEnd="4dp"
                     app:icon="@drawable/outline_takeout_dining_24"
                     app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.ExtraLarge"/>
-
-            <com.google.android.material.button.MaterialButton
-                    android:id="@+id/v_dinner"
-                    style="@style/Widget.Material3.Button.TextButton.Dialog.Icon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="24dp"
-                    android:text="W zestawie"
-                    app:icon="@drawable/outline_restaurant_menu_24"
-                    app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.ExtraLarge"/>
         </LinearLayout>
 
         <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal">
             <com.google.android.material.button.MaterialButton
                     style="@style/Widget.Material3.Button.TonalButton"
                     android:id="@+id/v_amount"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_weight=".5"
                     android:layout_marginStart="4dp"
                     android:layout_marginEnd="2dp"
                     android:layout_marginBottom="4dp"
-                    android:textAppearance="@style/TextAppearance.Material3.DisplayMedium"
+                    android:padding="32dp"
+                    android:text="14 zl"
                     app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.ExtraLarge"/>
 
-            <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/v_productTest"
+            <com.google.android.material.button.MaterialButton
+                    style="@style/Widget.Material3.Button.TonalButton"
+                    android:id="@+id/v_amount_set"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight=".5"
+                    android:layout_weight="1"
                     android:layout_marginStart="2dp"
                     android:layout_marginEnd="4dp"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginTop="4dp"
-                    android:clickable="true"
-                    android:focusable="true"
-                    app:strokeWidth="0dp"
-                    app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.ExtraLarge">
-                <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical">
-                    <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Podobne"
-                            android:textAppearance="@style/TextAppearance.Material3.LabelSmall"
-                            android:maxLines="1"
-                            android:layout_margin="16dp"
-                            android:gravity="center_horizontal"/>
-
-                    <com.google.android.material.imageview.ShapeableImageView
-                            android:id="@+id/v_image_recommend"
-                            android:layout_width="match_parent"
-                            android:layout_height="0dp"
-                            android:layout_weight="1"
-                            android:layout_marginHorizontal="4dp"
-                            android:scaleType="centerCrop"
-                            app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.ExtraLarge"/>
-
-                    <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical">
-                        <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Rolada schabowa"
-                                android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
-                                android:maxLines="2"
-                                android:layout_marginHorizontal="16dp"
-                                android:layout_marginTop="12dp"
-                                android:layout_marginBottom="16dp"/>
-                    </LinearLayout>
-                </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
+                    android:layout_marginBottom="4dp"
+                    android:padding="32dp"
+                    android:text="Zestaw 18 zl"
+                    app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.ExtraLarge"/>
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
