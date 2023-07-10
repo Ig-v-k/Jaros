@@ -1,9 +1,11 @@
 package com.iw.jarosandroid.facet;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -71,6 +73,18 @@ public final class HomeFacet extends Fragment implements Facet {
 
         final TextView vVersion = vMain.findViewById(R.id.v_version);
         vVersion.setText(getCurrentVersion());
+
+        final TextView vPrivacyPolicy = vMain.findViewById(R.id.v_privacypolicy);
+        vPrivacyPolicy.setOnClickListener(v -> {
+            Intent intent = new Intent(context.getApplicationContext(), PrivacyPolicyActivity.class);
+            startActivity(intent);
+        });
+
+        final TextView vTermsConditions = vMain.findViewById(R.id.v_termconditions);
+        vTermsConditions.setOnClickListener(v -> {
+            Intent intent = new Intent(context.getApplicationContext(), TermsConditionsActivity.class);
+            startActivity(intent);
+        });
     }
 
     private String getCurrentVersion() {
