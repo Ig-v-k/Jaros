@@ -32,13 +32,13 @@
             android:layout_height="wrap_content"
             android:text="Obiady • Sniadania • Garmaz • Wyroby wlasne • Catering dla firm"
             android:layout_marginHorizontal="16dp"
-            android:layout_marginBottom="32dp"
+            android:layout_marginBottom="24dp"
             android:textAppearance="@style/TextAppearance.Material3.BodySmall"/>
 
     <HorizontalScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="26dp">
+            android:layout_marginBottom="16dp">
         <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -172,7 +172,7 @@
     <HorizontalScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="32dp">
+            android:layout_marginBottom="24dp">
         <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/v_products"
                 android:layout_width="wrap_content"
@@ -181,7 +181,8 @@
 
     <HorizontalScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
         <com.google.android.material.chip.ChipGroup
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -210,4 +211,6 @@
                     style="@style/Widget.Material3.Chip.Assist"/>
         </com.google.android.material.chip.ChipGroup>
     </HorizontalScrollView>
+
+    <include layout="@layout/c_footer"/>
 </LinearLayout>

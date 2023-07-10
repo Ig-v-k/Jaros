@@ -1,10 +1,13 @@
 package com.iw.jarosandroid.facet;
 
 import android.content.Context;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -65,6 +68,20 @@ public final class HomeFacet extends Fragment implements Facet {
 
         final MaterialButton vSoups = vMain.findViewById(R.id.v_soups);
         vSoups.setOnClickListener(v -> route.forward(new ProductsFacet(route, "Zupa")));
+
+        final TextView vVersion = vMain.findViewById(R.id.v_version);
+        vVersion.setText(getCurrentVersion());
+    }
+
+    private String getCurrentVersion() {
+        PackageManager pm = context.getPackageManager();
+        try {
+            PackageInfo pInfo = pm.getPackageInfo(context.getPackageName(), 0);
+            return "v" + pInfo.versionName;
+        } catch (PackageManager.NameNotFoundException e1) {
+            e1.printStackTrace();
+            return "v0.0";
+        }
     }
 
     @Override
