@@ -40,7 +40,7 @@
                     android:layout_height="match_parent"
                     android:text="14 zl"
                     android:gravity="top"
-                    android:textAppearance="@style/TextAppearance.Material3.TitleLarge"/>
+                    android:textAppearance="@style/TextAppearance.Material3.TitleMedium"/>
         </LinearLayout>
 
 
