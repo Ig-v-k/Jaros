@@ -54,7 +54,9 @@ public final class ProductsFacet extends Fragment implements Facet {
                               @Nullable @org.jetbrains.annotations.Nullable Bundle savedInstanceState) {
         final Products productsLocal = new ConstProducts(new SQLiteHelper(context));
         final List<Product> products = productsLocal.list();
-        products.removeIf(product -> !product.category().equals(category));
+        if (!category.isEmpty()) {
+            products.removeIf(product -> !product.category().equals(category));
+        }
 
         final MaterialToolbar vToolbar = vMain.findViewById(R.id.v_toolbar);
         vToolbar.setNavigationOnClickListener(v -> route.back());
