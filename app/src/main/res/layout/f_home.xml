@@ -188,14 +188,16 @@
                 android:layout_height="wrap_content"
                 app:singleLine="true">
             <com.google.android.material.chip.Chip
+                    android:id="@+id/v_address"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Address"
                     android:layout_marginStart="16dp"
-                    app:chipIcon="@drawable/outline_map_24"
+                    app:chipIcon="@drawable/outline_place_24"
                     style="@style/Widget.Material3.Chip.Assist"/>
 
             <com.google.android.material.chip.Chip
+                    android:id="@+id/v_worktime"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Godziny pracy"
@@ -203,6 +205,7 @@
                     style="@style/Widget.Material3.Chip.Assist"/>
 
             <com.google.android.material.chip.Chip
+                    android:id="@+id/v_contact"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Kontakt"

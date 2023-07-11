@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
@@ -12,11 +13,14 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.google.android.material.button.MaterialButton;
+import com.google.android.material.chip.Chip;
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.iw.jarosandroid.*;
 import com.iw.jarosandroid.adapter.ProductHomeAdapter;
 import com.iw.jarosandroid.database.SQLiteHelper;
@@ -84,6 +88,22 @@ public final class HomeFacet extends Fragment implements Facet {
         vTermsConditions.setOnClickListener(v -> {
             Intent intent = new Intent(context.getApplicationContext(), TermsConditionsActivity.class);
             startActivity(intent);
+        });
+
+        final Chip vAddress = vMain.findViewById(R.id.v_address);
+        vAddress.setOnClickListener(v -> {
+            new MaterialAlertDialogBuilder(context)
+                    .setIcon(R.drawable.outline_place_24)
+                    .setTitle("Adres")
+                    .setMessage("Jagielonska 38, 80-367 Gdansk")
+                    .setPositiveButton("Mapa", (dialog, which) -> {
+                        Uri gmmIntentUri = Uri.parse("geo:54.413142,18.598482?z=16&q=" + Uri.encode("Bar mleczny Jaros"));
+                        Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+                        mapIntent.setPackage("com.google.android.apps.maps");
+                        startActivity(mapIntent);
+                    })
+                    .setNeutralButton("Zamknij", (dialog, which) -> dialog.dismiss())
+                    .show();
         });
     }
 
