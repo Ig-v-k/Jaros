@@ -6,14 +6,12 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
-import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -91,20 +89,19 @@ public final class HomeFacet extends Fragment implements Facet {
         });
 
         final Chip vAddress = vMain.findViewById(R.id.v_address);
-        vAddress.setOnClickListener(v -> {
-            new MaterialAlertDialogBuilder(context)
-                    .setIcon(R.drawable.outline_place_24)
-                    .setTitle("Adres")
-                    .setMessage("Jagielonska 38, 80-367 Gdansk")
-                    .setPositiveButton("Mapa", (dialog, which) -> {
-                        Uri gmmIntentUri = Uri.parse("geo:54.413142,18.598482?z=16&q=" + Uri.encode("Bar mleczny Jaros"));
-                        Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
-                        mapIntent.setPackage("com.google.android.apps.maps");
-                        startActivity(mapIntent);
-                    })
-                    .setNeutralButton("Zamknij", (dialog, which) -> dialog.dismiss())
-                    .show();
-        });
+        vAddress.setOnClickListener(v ->
+                new MaterialAlertDialogBuilder(context)
+                        .setIcon(R.drawable.outline_place_24)
+                        .setTitle("Adres")
+                        .setMessage("Jagielonska 38, 80-367 Gdansk")
+                        .setPositiveButton("Mapa", (dialog, which) -> {
+                            Uri gmmIntentUri = Uri.parse("geo:54.413142,18.598482?z=16&q=" + Uri.encode("Bar mleczny Jaros"));
+                            Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+                            mapIntent.setPackage("com.google.android.apps.maps");
+                            startActivity(mapIntent);
+                        })
+                        .setNeutralButton("Zamknij", (dialog, which) -> dialog.dismiss())
+                        .show());
     }
 
     private String getCurrentVersion() {
