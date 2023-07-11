@@ -8,7 +8,7 @@ import com.iw.jarosandroid.Container;
 public final class SQLiteHelper extends SQLiteOpenHelper implements Container {
 
     public SQLiteHelper(final Context context) {
-        this(context.getApplicationContext(), 3);
+        this(context.getApplicationContext(), 5);
     }
 
     private SQLiteHelper(final Context context, final int version) {

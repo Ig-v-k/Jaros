@@ -37,7 +37,7 @@ public final class ProductsListAdapter extends ArrayAdapter<Product> {
         final ShapeableImageView vImage = vMain.findViewById(R.id.v_image);
         vImage.setImageResource(
                 context.getResources().getIdentifier(
-                        product.name().toLowerCase().trim().replace(" ", ""), "drawable", context.getPackageName()));
+                        product.name().toLowerCase().trim().replaceAll("[^A-Za-z0-9]", ""), "drawable", context.getPackageName()));
 
         final TextView vTitle = vMain.findViewById(R.id.v_title);
         vTitle.setText(product.name());
