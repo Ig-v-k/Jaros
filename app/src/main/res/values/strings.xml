@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Jaros</string>
+
+    <string name="worktime">Poniedzialek: 09:00–18:00\nWtorek: 09:00–18:00\nSroda: 09:00–18:00\nCzwartek: 09:00–18:00\nPiatek: 09:00–18:00\nSobota: 10:00–17:00\nNiedziela: Nieczynne</string>
 </resources>

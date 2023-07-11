@@ -102,6 +102,15 @@ public final class HomeFacet extends Fragment implements Facet {
                         })
                         .setNeutralButton("Zamknij", (dialog, which) -> dialog.dismiss())
                         .show());
+
+        final Chip vWorktime = vMain.findViewById(R.id.v_worktime);
+        vWorktime.setOnClickListener(v ->
+                new MaterialAlertDialogBuilder(context)
+                        .setIcon(R.drawable.outline_schedule_24)
+                        .setTitle("Godziny pracy")
+                        .setMessage(R.string.worktime)
+                        .setNeutralButton("Zamknij", (dialog, which) -> dialog.dismiss())
+                        .show());
     }
 
     private String getCurrentVersion() {
