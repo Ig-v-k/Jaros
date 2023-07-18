@@ -1,7 +1,7 @@
 package com.iw.jarosandroid;
 
 import androidx.test.ext.junit.runners.AndroidJUnit4;
-import com.iw.jarosandroid.database.SQLiteHelper;
+import com.iw.jarosandroid.sqlite.SQLiteHelper;
 import com.iw.jarosandroid.products.ConstProducts;
 import org.junit.Before;
 import org.junit.Test;

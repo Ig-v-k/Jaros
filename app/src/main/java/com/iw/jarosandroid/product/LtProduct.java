@@ -2,19 +2,19 @@ package com.iw.jarosandroid.product;
 
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import com.iw.jarosandroid.Container;
+import com.iw.jarosandroid.Sqlite;
 import com.iw.jarosandroid.Product;
 
 import java.util.Arrays;
 
 public final class LtProduct implements Product {
 
-    private final Container container;
+    private final Sqlite sqlite;
 
     private final int id;
 
-    public LtProduct(Container container, int id) {
-        this.container = container;
+    public LtProduct(Sqlite sqlite, int id) {
+        this.sqlite = sqlite;
         this.id = id;
     }
 
@@ -27,7 +27,7 @@ public final class LtProduct implements Product {
     public String name() {
         final String query = "SELECT name FROM product_table WHERE _id = ?";
         final String[] params = new String[]{String.valueOf(id)};
-        try (final SQLiteDatabase database = container.read();
+        try (final SQLiteDatabase database = sqlite.read();
              final Cursor cursor = database.rawQuery(query, params)) {
             if (cursor.getCount() > 0) {
                 cursor.moveToFirst();
@@ -45,7 +45,7 @@ public final class LtProduct implements Product {
     public String category() {
         final String query = "SELECT category FROM product_table WHERE _id = ?";
         final String[] params = new String[]{String.valueOf(id)};
-        try (final SQLiteDatabase database = container.read();
+        try (final SQLiteDatabase database = sqlite.read();
              final Cursor cursor = database.rawQuery(query, params)) {
             if (cursor.getCount() > 0) {
                 cursor.moveToFirst();
@@ -63,7 +63,7 @@ public final class LtProduct implements Product {
     public String ingredients() {
         final String query = "SELECT ingredients FROM product_table WHERE _id = ?";
         final String[] params = new String[]{String.valueOf(id)};
-        try (final SQLiteDatabase database = container.read();
+        try (final SQLiteDatabase database = sqlite.read();
              final Cursor cursor = database.rawQuery(query, params)) {
             if (cursor.getCount() > 0) {
                 cursor.moveToFirst();
@@ -81,7 +81,7 @@ public final class LtProduct implements Product {
     public double pln() {
         final String query = "SELECT pln FROM product_table WHERE _id = ?";
         final String[] params = new String[]{String.valueOf(id)};
-        try (final SQLiteDatabase database = container.read();
+        try (final SQLiteDatabase database = sqlite.read();
              final Cursor cursor = database.rawQuery(query, params)) {
             if (cursor.getCount() > 0) {
                 cursor.moveToFirst();
@@ -99,7 +99,7 @@ public final class LtProduct implements Product {
     public boolean favorite() {
         final String query = "SELECT favorite FROM product_table WHERE _id = ?";
         final String[] params = new String[]{String.valueOf(id)};
-        try (final SQLiteDatabase database = container.read();
+        try (final SQLiteDatabase database = sqlite.read();
              final Cursor cursor = database.rawQuery(query, params)) {
             if (cursor.getCount() > 0) {
                 cursor.moveToFirst();

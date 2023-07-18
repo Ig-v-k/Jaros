@@ -1,0 +1,12 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Devolay",
+      "category": "Mieso",
+      "ingredients": "Mieso, sos, olej",
+      "pln": 14.0,
+      "favorite": false
+    }
+  ]
+}

@@ -21,7 +21,7 @@ import com.google.android.material.chip.Chip;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.iw.jarosandroid.*;
 import com.iw.jarosandroid.adapter.ProductHomeAdapter;
-import com.iw.jarosandroid.database.SQLiteHelper;
+import com.iw.jarosandroid.sqlite.SQLiteHelper;
 import com.iw.jarosandroid.products.ConstProducts;
 import org.jetbrains.annotations.NotNull;
 

@@ -1,11 +1,11 @@
-package com.iw.jarosandroid.database;
+package com.iw.jarosandroid.sqlite;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import com.iw.jarosandroid.Container;
+import com.iw.jarosandroid.Sqlite;
 
-public final class SQLiteHelper extends SQLiteOpenHelper implements Container {
+public final class SQLiteHelper extends SQLiteOpenHelper implements Sqlite {
 
     public SQLiteHelper(final Context context) {
         this(context.getApplicationContext(), 5);

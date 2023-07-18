@@ -2,7 +2,7 @@ package com.iw.jarosandroid.products;
 
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import com.iw.jarosandroid.Container;
+import com.iw.jarosandroid.Sqlite;
 import com.iw.jarosandroid.Product;
 import com.iw.jarosandroid.Products;
 import com.iw.jarosandroid.product.ConstProduct;
@@ -12,22 +12,22 @@ import java.util.ArrayList;
 import java.util.List;
 
 public final class ConstProducts implements Products {
-    private final Container container;
+    private final Sqlite sqlite;
 
     private final Products origin;
 
-    public ConstProducts(Container container) {
-        this(container, new LtProducts(container));
+    public ConstProducts(Sqlite sqlite) {
+        this(sqlite, new LtProducts(sqlite));
     }
 
-    public ConstProducts(Container container, Products origin) {
-        this.container = container;
+    public ConstProducts(Sqlite sqlite, Products origin) {
+        this.sqlite = sqlite;
         this.origin = origin;
     }
 
     @Override
     public List<Product> list() {
-        try (final SQLiteDatabase database = this.container.read();
+        try (final SQLiteDatabase database = this.sqlite.read();
              final Cursor cursor = database.rawQuery("SELECT * FROM product_table", null)) {
             final List<Product> columns = new ArrayList<>(0);
             cursor.moveToFirst();
@@ -35,7 +35,7 @@ public final class ConstProducts implements Products {
                 final int id = cursor.getInt(cursor.getColumnIndexOrThrow("_id"));
                 columns.add(
                         new ConstProduct(
-                                new LtProduct(container, id),
+                                new LtProduct(sqlite, id),
                                 cursor.getString(cursor.getColumnIndexOrThrow("name")),
                                 cursor.getString(cursor.getColumnIndexOrThrow("category")),
                                 cursor.getString(cursor.getColumnIndexOrThrow("ingredients")),

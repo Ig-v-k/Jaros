@@ -12,7 +12,7 @@ import androidx.fragment.app.Fragment;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.iw.jarosandroid.*;
 import com.iw.jarosandroid.adapter.ProductsListAdapter;
-import com.iw.jarosandroid.database.SQLiteHelper;
+import com.iw.jarosandroid.sqlite.SQLiteHelper;
 import com.iw.jarosandroid.products.ConstProducts;
 import org.jetbrains.annotations.NotNull;
 
