@@ -1,12 +1,6 @@
 {
   "products": [
-    {
-      "id": 1,
-      "name": "Devolay",
-      "category": "Mieso",
-      "ingredients": "Mieso, sos, olej",
-      "pln": 14.0,
-      "favorite": false
-    }
+    {"id": 1, "name": "Devolay", "category": "Mieso", "ingredients": "Mieso, sos, olej", "pln": 14.0, "favorite": false},
+    {"id": 2, "name": "Buleczka", "category": "Dodatki", "ingredients": "Maka", "pln": 1.0, "favorite": false}
   ]
 }

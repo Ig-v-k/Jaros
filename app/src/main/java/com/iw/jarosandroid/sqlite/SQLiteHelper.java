@@ -8,10 +8,10 @@ import com.iw.jarosandroid.Sqlite;
 public final class SQLiteHelper extends SQLiteOpenHelper implements Sqlite {
 
     public SQLiteHelper(final Context context) {
-        this(context.getApplicationContext(), 5);
+        this(context.getApplicationContext(), 0);
     }
 
-    private SQLiteHelper(final Context context, final int version) {
+    public SQLiteHelper(final Context context, final int version) {
         this(context, "jarosandroid_db", null, version);
     }
 
@@ -30,10 +30,13 @@ public final class SQLiteHelper extends SQLiteOpenHelper implements Sqlite {
     }
 
     @Override
-    public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
-        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS product_table");
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        db.setVersion(newVersion);
+    }
 
-        onCreate(sqLiteDatabase);
+    @Override
+    public void onDowngrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        db.setVersion(newVersion);
     }
 
     @Override
