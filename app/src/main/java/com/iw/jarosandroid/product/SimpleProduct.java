@@ -51,6 +51,9 @@ public final class SimpleProduct implements Product {
         return favorite;
     }
 
+    @Override
+    public void update(String name, String category, String ingredients, double pln, boolean favorite) {}
+
     @NotNull
     @Override
     public String toString() {

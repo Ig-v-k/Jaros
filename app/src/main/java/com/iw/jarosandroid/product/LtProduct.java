@@ -1,5 +1,6 @@
 package com.iw.jarosandroid.product;
 
+import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import com.iw.jarosandroid.Sqlite;
@@ -110,6 +111,20 @@ public final class LtProduct implements Product {
                         query, Arrays.toString(params));
                 throw new RuntimeException(mes);
             }
+        }
+    }
+
+    @Override
+    public void update(String name, String category, String ingredients, double pln, boolean favorite) {
+        final String where = "_id = ?";
+        final ContentValues values = new ContentValues();
+        values.put("name", name);
+        values.put("category", category);
+        values.put("ingredients", ingredients);
+        values.put("pln", pln);
+        values.put("favorite", favorite ? 1 : -1);
+        try (final SQLiteDatabase database = sqlite.read()) {
+            database.update("product_table", values, where, new String[]{String.valueOf(this.id)});
         }
     }
 }

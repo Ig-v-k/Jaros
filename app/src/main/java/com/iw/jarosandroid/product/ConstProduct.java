@@ -49,4 +49,9 @@ public final class ConstProduct implements Product {
     public boolean favorite() {
         return favorite;
     }
+
+    @Override
+    public void update(String name, String category, String ingredients, double pln, boolean favorite) {
+        origin.update(name, category, ingredients, pln, favorite);
+    }
 }

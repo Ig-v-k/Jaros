@@ -49,4 +49,7 @@ public final class JsonProduct implements Product {
     public boolean favorite() {
         return favorite;
     }
+
+    @Override
+    public void update(String name, String category, String ingredients, double pln, boolean favorite) {}
 }
