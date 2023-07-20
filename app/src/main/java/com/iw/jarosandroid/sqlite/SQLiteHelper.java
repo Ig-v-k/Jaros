@@ -8,7 +8,7 @@ import com.iw.jarosandroid.Sqlite;
 public final class SQLiteHelper extends SQLiteOpenHelper implements Sqlite {
 
     public SQLiteHelper(final Context context) {
-        this(context.getApplicationContext(), 0);
+        this(context.getApplicationContext(), 1);
     }
 
     public SQLiteHelper(final Context context, final int version) {
