@@ -16,7 +16,7 @@
     <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Copyright © 2023 Jaros"
+            android:text="Wszystkie prawa zastrzezone © 2023-2024 Jaros"
             android:layout_marginBottom="4dp"
             android:textAppearance="@style/TextAppearance.Material3.BodySmall"
             android:gravity="center_horizontal"/>
