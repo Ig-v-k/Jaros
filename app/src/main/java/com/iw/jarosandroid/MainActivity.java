@@ -52,8 +52,8 @@ public final class MainActivity extends AppCompatActivity {
     public void refreshDatabase() {
         final String json = "jaros.json";
         final AssetManager assets = getAssets();
-        final SQLiteHelper helper = new SQLiteHelper(this);
-        try (final SQLiteDatabase database = helper.write();
+        try (final SQLiteHelper helper = new SQLiteHelper(this);
+             final SQLiteDatabase database = helper.write();
              final BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(assets.open(json)))) {
             final Jaros jaros = new JsonJaros().from(bufferedReader);
             final List<Product> jsonProducts = jaros.products();
