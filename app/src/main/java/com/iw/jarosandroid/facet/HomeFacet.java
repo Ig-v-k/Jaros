@@ -9,23 +9,15 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.DefaultItemAnimator;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-import com.google.android.material.button.MaterialButton;
 import com.google.android.material.chip.Chip;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.iw.jarosandroid.*;
-import com.iw.jarosandroid.adapter.ProductHomeAdapter;
-import com.iw.jarosandroid.sqlite.SQLiteHelper;
-import com.iw.jarosandroid.products.ConstProducts;
 import org.jetbrains.annotations.NotNull;
-
-import java.util.List;
 
 public final class HomeFacet extends Fragment implements Facet {
 
@@ -74,6 +66,9 @@ public final class HomeFacet extends Fragment implements Facet {
         final MaterialButton vSoups = vMain.findViewById(R.id.v_soups);
         vSoups.setOnClickListener(v -> route.forward(new ProductsFacet(route, "Zupa")));
 */
+
+        final LinearLayout vDinner = vMain.findViewById(R.id.v_dinner);
+        vDinner.setOnClickListener(v -> route.forward(new DinnerFacet(route)));
 
         final TextView vVersion = vMain.findViewById(R.id.v_version);
         vVersion.setText(getCurrentVersion());
