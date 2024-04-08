@@ -9,42 +9,46 @@
             android:id="@+id/v_dinner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:orientation="vertical"
             android:background="@drawable/c_dinner_background"
             android:clickable="true"
             android:focusable="true"
             android:foreground="?android:attr/selectableItemBackground"
             android:padding="2dp">
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🍲 Zestaw obiadowy"
+                android:layout_marginTop="16dp"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginBottom="12dp"
+                android:gravity="bottom"
+                android:textAppearance="@style/TextAppearance.Material3.HeadlineMedium"/>
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="20-32 zł.  •  09:00 - 18:00 •  Bez oczekiwania"
+                android:layout_marginBottom="12dp"
+                android:layout_marginHorizontal="12dp"
+                android:gravity="bottom"
+                android:textAppearance="@style/TextAppearance.Material3.TitleMedium"/>
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Zupa + Drugie danie.\nDrugie danie - Mieso(Kotlet, Filet, Stek)/Ryba + Kasza/Ziemniaki"
+                android:layout_marginBottom="24dp"
+                android:layout_marginHorizontal="12dp"
+                android:gravity="bottom"
+                android:textAppearance="@style/TextAppearance.Material3.BodyMedium"/>
+
         <com.google.android.material.imageview.ShapeableImageView
-                android:layout_width="180dp"
-                android:layout_height="110dp"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
                 android:src="@drawable/dinner"
                 android:scaleType="centerCrop"
-                app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Large"/>
-
-        <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:gravity="bottom">
-            <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:text="Zestaw obiadowy"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginBottom="4dp"
-                    android:gravity="bottom"
-                    android:textAppearance="@style/TextAppearance.Material3.HeadlineMedium"/>
-            <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="20-32 zl."
-                    android:layout_marginStart="8dp"
-                    android:layout_marginBottom="4dp"
-                    android:gravity="bottom"
-                    android:textAppearance="@style/TextAppearance.Material3.BodyLarge"/>
-        </LinearLayout>
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginVertical="12dp"
+                app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.ExtraLarge"/>
     </LinearLayout>
 
     <com.google.android.material.divider.MaterialDivider
@@ -56,41 +60,45 @@
             android:id="@+id/v_breakfast"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:orientation="vertical"
             android:background="@drawable/c_dinner_background"
             android:clickable="true"
             android:focusable="true"
             android:foreground="?android:attr/selectableItemBackground"
             android:padding="2dp">
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🍳 Zestaw śniadaniowy"
+                android:layout_marginTop="16dp"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginBottom="12dp"
+                android:gravity="bottom"
+                android:textAppearance="@style/TextAppearance.Material3.HeadlineMedium"/>
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="14 zł.  •  09:00 - 12:00  •  Do 10 min."
+                android:layout_marginBottom="12dp"
+                android:layout_marginHorizontal="12dp"
+                android:gravity="bottom"
+                android:textAppearance="@style/TextAppearance.Material3.TitleMedium"/>
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Jajecznica(3 jaja, na masle/boczku)/Kielbasa smazona/Jajka sadzone + Talerzyk sniadaniowy/Tosty + Kawa/Herbata/Kakao"
+                android:layout_marginBottom="24dp"
+                android:layout_marginHorizontal="12dp"
+                android:gravity="bottom"
+                android:textAppearance="@style/TextAppearance.Material3.BodyMedium"/>
+
         <com.google.android.material.imageview.ShapeableImageView
-                android:layout_width="180dp"
-                android:layout_height="110dp"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
                 android:src="@drawable/breakfast"
                 android:scaleType="centerCrop"
-                app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Large"/>
-
-        <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:gravity="bottom">
-            <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:text="Zestaw sniadaniowy"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginBottom="4dp"
-                    android:gravity="bottom"
-                    android:textAppearance="@style/TextAppearance.Material3.HeadlineMedium"/>
-            <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="14 zl."
-                    android:layout_marginStart="8dp"
-                    android:layout_marginBottom="4dp"
-                    android:gravity="bottom"
-                    android:textAppearance="@style/TextAppearance.Material3.BodyLarge"/>
-        </LinearLayout>
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginVertical="12dp"
+                app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.ExtraLarge"/>
     </LinearLayout>
 </LinearLayout>
