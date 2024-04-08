@@ -35,7 +35,7 @@
         <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Zupa + Drugie danie.\nDrugie danie - Mieso(Kotlet, Filet, Stek)/Ryba + Kasza/Ziemniaki"
+                android:text="Zupa(8 zł.) + Drugie danie.\nDrugie danie - Mieso(Kotlet, Filet, Stek)/Ryba + Kasza/Ziemniaki"
                 android:layout_marginBottom="24dp"
                 android:layout_marginHorizontal="12dp"
                 android:gravity="bottom"
@@ -47,7 +47,7 @@
                 android:src="@drawable/dinner"
                 android:scaleType="centerCrop"
                 android:layout_marginHorizontal="12dp"
-                android:layout_marginVertical="12dp"
+                android:layout_marginBottom="16dp"
                 app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.ExtraLarge"/>
     </LinearLayout>
 
@@ -98,7 +98,7 @@
                 android:src="@drawable/breakfast"
                 android:scaleType="centerCrop"
                 android:layout_marginHorizontal="12dp"
-                android:layout_marginVertical="12dp"
+                android:layout_marginBottom="16dp"
                 app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.ExtraLarge"/>
     </LinearLayout>
 
@@ -202,5 +202,35 @@
                     android:gravity="bottom"
                     android:textAppearance="@style/TextAppearance.Material3.BodyMedium"/>
         </LinearLayout>
+    </LinearLayout>
+
+    <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            app:dividerColor="?android:colorBackground"/>
+
+    <LinearLayout
+            android:id="@+id/v_box"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/c_dinner_background"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:padding="12dp">
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🥡 Opakowanie na wynos"
+                android:gravity="bottom"
+                android:layout_marginBottom="12dp"
+                android:textAppearance="@style/TextAppearance.Material3.HeadlineMedium"/>
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1 zł./szt."
+                android:gravity="bottom"
+                android:textAppearance="@style/TextAppearance.Material3.TitleMedium"/>
     </LinearLayout>
 </LinearLayout>
