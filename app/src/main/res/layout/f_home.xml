@@ -35,8 +35,6 @@
             android:layout_marginBottom="24dp"
             android:textAppearance="@style/TextAppearance.Material3.BodySmall"/>
 
-    <include layout="@layout/c_categories"/>
-
     <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -50,6 +48,7 @@
                 android:layout_marginStart="16dp"/>
 
         <Button
+                android:visibility="gone"
                 android:id="@+id/v_see_all"
                 style="@style/Widget.Material3.Button.TextButton"
                 android:layout_width="wrap_content"
