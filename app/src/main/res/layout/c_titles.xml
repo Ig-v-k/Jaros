@@ -20,7 +20,7 @@
     <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Obiady • Sniadania • Garmaz • Wyroby wlasne • Catering dla firm"
+            android:text="Obiady • Śniadania • Garmaż • Wyroby własne • Catering dla firm"
             android:layout_marginHorizontal="16dp"
             android:layout_marginBottom="24dp"
             android:textAppearance="@style/TextAppearance.Material3.BodySmall"/>

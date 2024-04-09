@@ -35,7 +35,7 @@
         <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Zupa(8 zł.) + Drugie danie.\nDrugie danie - Mieso(Kotlet, Filet, Stek)/Ryba + Kasza/Ziemniaki"
+                android:text="Zupa(8 zł.) + Drugie danie.\nDrugie danie - Mięso(Kotlet, Filet, Stek)/Ryba + Kasza/Ziemniaki"
                 android:layout_marginBottom="24dp"
                 android:layout_marginHorizontal="12dp"
                 android:gravity="bottom"
@@ -86,7 +86,7 @@
         <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Jajecznica(3 jaja, na masle/boczku)/Kielbasa smazona/Jajka sadzone + Talerzyk sniadaniowy/Tosty + Kawa/Herbata/Kakao"
+                android:text="Jajecznica(3 jaja, na maśle/boczku)/Kiełbasa smażona/Jajka sadzone + Talerzyk śniadaniowy/Tosty + Kawa/Herbata/Kakao"
                 android:layout_marginBottom="24dp"
                 android:layout_marginHorizontal="12dp"
                 android:gravity="bottom"
@@ -147,7 +147,7 @@
             <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Twarog/Polewa(truskawka)"
+                    android:text="Twaróg/Polewa(truskawka)"
                     android:gravity="bottom"
                     android:textAppearance="@style/TextAppearance.Material3.BodyMedium"/>
         </LinearLayout>
@@ -198,7 +198,7 @@
             <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Miesne/Ruskie/Twarog"
+                    android:text="Mięsne/Ruskie/Twaróg"
                     android:gravity="bottom"
                     android:textAppearance="@style/TextAppearance.Material3.BodyMedium"/>
         </LinearLayout>
